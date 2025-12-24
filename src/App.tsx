@@ -117,7 +117,7 @@ export default function App() {
           key={window.id}
           window={window}
           onClose={() => closeWindow(window.id)}
-          onMinimize={() => updateWindow(window.id, { isMinimized: true })}
+          onMinimize={() => updateWindow(window.id, { isMinimized: !window.isMinimized })}
           onMaximize={() =>
             updateWindow(window.id, {
               isMaximized: !window.isMaximized,

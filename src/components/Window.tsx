@@ -5,7 +5,6 @@ import type { WindowState } from '../App';
 interface WindowProps {
   window: WindowState;
   onClose: () => void;
-  onMinimize: () => void;
   onMaximize: () => void;
   onFocus: () => void;
   onUpdatePosition: (position: { x: number; y: number }) => void;
@@ -31,6 +30,7 @@ export function Window({
 
   const handleMouseDown = (e: React.MouseEvent) => {
     if ((e.target as HTMLElement).closest('.window-controls')) return;
+    if (window.isMinimized) return;
     onFocus();
     setIsDragging(true);
     setDragOffset({
@@ -104,9 +104,15 @@ export function Window({
     }
   }, [isDragging, isResizing, dragOffset, window.isMaximized, window.position.x, window.position.y, resizeStart, onUpdatePosition, onUpdateSize]);
 
-  if (window.isMinimized) return null;
-
-  const style = window.isMaximized
+  const style = window.isMinimized
+    ? {
+        left: 0,
+        bottom: 40,
+        width: '200px',
+        height: '8px',
+        zIndex: window.zIndex,
+      }
+    : window.isMaximized
     ? {
         left: 0,
         top: 0,
@@ -142,12 +148,6 @@ export function Window({
           <span className="text-white text-sm drop-shadow-sm">{window.title}</span>
         </div>
         <div className="flex items-center gap-1 window-controls">
-          <button
-            onClick={onMinimize}
-            className="w-7 h-6 rounded bg-gradient-to-b from-blue-300/80 to-blue-400/80 hover:from-blue-200/80 hover:to-blue-300/80 flex items-center justify-center border border-blue-600/30 shadow-sm"
-          >
-            <Minus className="w-3 h-3 text-gray-700" />
-          </button>
           <button
             onClick={onMaximize}
             className="w-7 h-6 rounded bg-gradient-to-b from-blue-300/80 to-blue-400/80 hover:from-blue-200/80 hover:to-blue-300/80 flex items-center justify-center border border-blue-600/30 shadow-sm"
