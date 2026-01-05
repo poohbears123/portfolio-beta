@@ -12,8 +12,8 @@ export function ContactContent() {
     {
       icon: Github,
       label: 'GitHub',
-      value: 'github.com/johndoe',
-      href: 'https://github.com',
+      value: 'https://github.com/poohbears123',
+      href: 'https://github.com/poohbears123',
       color: 'from-gray-700 to-gray-800',
     },
     {
@@ -33,15 +33,15 @@ export function ContactContent() {
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '(+63) 9460030607',
+      href: 'tel:+(63) 9460030607',
       color: 'from-green-500 to-green-600',
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
-      href: '#',
+      value: 'Roxas City, Philippines',
+      href: 'https://maps.app.goo.gl/z4K2EnYJWKuSTW4b8',
       color: 'from-purple-500 to-purple-600',
     },
   ];
