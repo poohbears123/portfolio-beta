@@ -5,8 +5,8 @@ export function ContactContent() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'john.doe@example.com',
-      href: 'mailto:john.doe@example.com',
+      value: 'jmspinuela2020@gmail.com',
+      href: 'mailto:jmspinuela2020@gmail.com',
       color: 'from-red-500 to-red-600',
     },
     {

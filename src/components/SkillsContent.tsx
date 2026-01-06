@@ -39,7 +39,7 @@ export function SkillsContent() {
     <div className="p-6">
       <div className="mb-6">
         <h2 className="text-gray-800">Skills & Technologies</h2>
-        <p className="text-gray-600">My technical expertise and proficiency levels</p>
+        <p className="text-gray-600">My technical expertise and proficiency levels(this area is a placeholder for now)</p>
       </div>
 
       <div className="space-y-6">
