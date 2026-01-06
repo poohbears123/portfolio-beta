@@ -2,7 +2,7 @@ export function ProjectsContent() {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
+      title: '(example)E-Commerce Platform',
       description: 'A full-featured online shopping platform with payment integration, inventory management, and user authentication.',
       tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       icon: '🛒',
@@ -10,7 +10,7 @@ export function ProjectsContent() {
     },
     {
       id: 2,
-      title: 'Task Management App',
+      title: '(example)Task Management App',
       description: 'Collaborative task management tool with real-time updates, team workspaces, and progress tracking.',
       tech: ['Vue.js', 'Firebase', 'Tailwind CSS'],
       icon: '✅',
@@ -18,7 +18,7 @@ export function ProjectsContent() {
     },
     {
       id: 3,
-      title: 'Weather Dashboard',
+      title: '(examles)Weather Dashboard',
       description: 'Real-time weather application with forecasts, maps, and location-based alerts.',
       tech: ['React', 'OpenWeather API', 'Chart.js'],
       icon: '🌤️',
@@ -26,7 +26,7 @@ export function ProjectsContent() {
     },
     {
       id: 4,
-      title: 'Portfolio CMS',
+      title: 'Portfolio ',
       description: 'Content management system for creative professionals to showcase their work.',
       tech: ['Next.js', 'Sanity', 'TypeScript'],
       icon: '🎨',
@@ -34,7 +34,7 @@ export function ProjectsContent() {
     },
     {
       id: 5,
-      title: 'Chat Application',
+      title: '(example)Chat Application',
       description: 'Real-time messaging app with group chats, file sharing, and emoji reactions.',
       tech: ['React', 'Socket.io', 'Express'],
       icon: '💬',
@@ -42,7 +42,7 @@ export function ProjectsContent() {
     },
     {
       id: 6,
-      title: 'Analytics Dashboard',
+      title: '(example)Analytics Dashboard',
       description: 'Business intelligence dashboard with interactive charts and data visualization.',
       tech: ['React', 'D3.js', 'PostgreSQL'],
       icon: '📊',

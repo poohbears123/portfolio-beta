@@ -8,6 +8,13 @@ finish projectcontent
 
 finish skill content
 - contents are in percentage
-- make changes on the layout
 - use actual skills 
 - add more
+
+add link to document
+
+add link to settings
+
+make search bar workable
+
+make shutdown into a kill switch

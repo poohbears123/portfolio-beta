@@ -8,7 +8,7 @@ export function AboutContent() {
           </div>
           <div className="flex-1">
             <h2 className="text-gray-800 mb-2">James Mezack Pinuela</h2>
-            <p className="text-blue-600 mb-3">Full Stack Developer | embedded systems developer</p>
+            <p className="text-blue-600 mb-3">Full Stack Developer | UX design | embedded systems dev</p>
             <p className="text-gray-600 leading-relaxed">
               Passionate developer with 4+ years of experience building modern web applications.
               I love creating intuitive user interfaces and solving complex problems.
@@ -21,7 +21,7 @@ export function AboutContent() {
           <p className="text-gray-600 leading-relaxed mb-4">
             I'm a creative developer who enjoys bringing ideas to life.
             With expertise in modern web technologies, I specialize in creating
-            responsive and performant applications that users love with a background in embedded systems developement(ESD).
+            responsive and performant applications that users love, with a background in embedded systems developement(ESD).
           </p>
           <p className="text-gray-600 leading-relaxed">
             When I'm not coding, you can find me exploring new technologies,
@@ -41,8 +41,7 @@ export function AboutContent() {
           </div>
           <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-4 text-center border border-purple-200">
             <div className="text-3xl mb-2">🚀</div>
-            <p className="text-gray-700 text-sm">50+ electronics projects</p>
-            <p className="text-gray-700 text-sm">10+ IT projects</p>
+            <p className="text-gray-700 text-sm">50+ projects</p>
           </div>
         </div>
       </div>
