@@ -6,6 +6,8 @@ import { AboutContent } from './components/AboutContent';
 import { ProjectsContent } from './components/ProjectsContent';
 import { SkillsContent } from './components/SkillsContent';
 import { ContactContent } from './components/ContactContent';
+import { DocumentContent } from './components/DocumentContent';
+import { SettingsContent } from './components/SettingsContent';
 
 export interface WindowState {
   id: string;
@@ -22,6 +24,7 @@ export interface WindowState {
 export default function App() {
   const [windows, setWindows] = useState<WindowState[]>([]);
   const [nextZIndex, setNextZIndex] = useState(2);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const openWindow = (windowType: string) => {
     const existingWindow = windows.find((w) => w.content === windowType);
@@ -56,6 +59,18 @@ export default function App() {
         title: 'Contact',
         icon: '✉️',
         position: { x: 250, y: 140 },
+        size: { width: 500, height: 400 },
+      },
+      documents: {
+        title: 'Documents',
+        icon: '📄',
+        position: { x: 300, y: 160 },
+        size: { width: 600, height: 500 },
+      },
+      settings: {
+        title: 'Settings',
+        icon: '⚙️',
+        position: { x: 350, y: 180 },
         size: { width: 500, height: 400 },
       },
     };
@@ -103,13 +118,17 @@ export default function App() {
         return <SkillsContent />;
       case 'contact':
         return <ContactContent />;
+      case 'documents':
+        return <DocumentContent />;
+      case 'settings':
+        return <SettingsContent isDarkMode={isDarkMode} onToggleDarkMode={() => setIsDarkMode(!isDarkMode)} />;
       default:
         return null;
     }
   };
 
   return (
-    <div className="fixed inset-0 overflow-hidden bg-gradient-to-br from-sky-400 via-blue-500 to-blue-600">
+    <div className={`fixed inset-0 overflow-hidden bg-gradient-to-br from-sky-400 via-blue-500 to-blue-600 ${isDarkMode ? 'dark' : ''}`}>
       <Desktop onOpenWindow={openWindow} />
       
       {windows.map((window) => (

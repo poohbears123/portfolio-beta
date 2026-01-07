@@ -15,6 +15,8 @@ export function Desktop({ onOpenWindow }: DesktopProps) {
     { id: 'projects', label: 'My Projects', icon: '📁' },
     { id: 'skills', label: 'Skills', icon: '⚡' },
     { id: 'contact', label: 'Contact', icon: '✉️' },
+    { id: 'documents', label: 'Documents', icon: '📄' },
+    { id: 'settings', label: 'Settings', icon: '⚙️' },
   ];
 
   const [iconPositions, setIconPositions] = useState<Record<string, IconPosition>>({
@@ -22,6 +24,8 @@ export function Desktop({ onOpenWindow }: DesktopProps) {
     projects: { x: 16, y: 120 },
     skills: { x: 16, y: 224 },
     contact: { x: 16, y: 328 },
+    documents: { x: 16, y: 432 },
+    settings: { x: 16, y: 536 },
   });
 
   const [draggingIcon, setDraggingIcon] = useState<string | null>(null);

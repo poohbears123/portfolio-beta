@@ -15,7 +15,6 @@ interface WindowProps {
 export function Window({
   window,
   onClose,
-  onMinimize,
   onMaximize,
   onFocus,
   onUpdatePosition,

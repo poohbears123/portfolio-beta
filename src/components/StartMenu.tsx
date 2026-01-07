@@ -1,11 +1,15 @@
+import { useState } from 'react';
 import { User, Folder, Settings, Power, Search } from 'lucide-react';
 
 interface StartMenuProps {
   onOpenWindow: (windowType: string) => void;
   onClose: () => void;
+  onShutdown?: () => void;
 }
 
 export function StartMenu({ onOpenWindow, onClose }: StartMenuProps) {
+  const [searchQuery, setSearchQuery] = useState('');
+
   const menuItems = [
     { id: 'about', label: 'About Me', icon: '👤', description: 'View profile' },
     { id: 'projects', label: 'My Projects', icon: '📁', description: 'Browse projects' },
@@ -13,9 +17,28 @@ export function StartMenu({ onOpenWindow, onClose }: StartMenuProps) {
     { id: 'contact', label: 'Contact', icon: '✉️', description: 'Get in touch' },
   ];
 
+  const filteredMenuItems = menuItems.filter(item =>
+    item.label.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    item.description.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   const handleItemClick = (id: string) => {
     onOpenWindow(id);
     onClose();
+  };
+
+  const handleSystemItemClick = (id: string) => {
+    onOpenWindow(id);
+    onClose();
+  };
+
+  const handleShutdown = () => {
+    if (onShutdown) {
+      onShutdown();
+    } else {
+      // Default behavior: close all windows and exit
+      window.close();
+    }
   };
 
   return (
@@ -48,7 +71,7 @@ export function StartMenu({ onOpenWindow, onClose }: StartMenuProps) {
           <div className="p-2">
             <div className="text-xs text-gray-400 px-2 py-1">Programs</div>
             <div className="space-y-1">
-              {menuItems.map((item) => (
+              {filteredMenuItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => handleItemClick(item.id)}
@@ -69,11 +92,17 @@ export function StartMenu({ onOpenWindow, onClose }: StartMenuProps) {
 
           {/* System options */}
           <div className="p-2 pb-3">
-            <button className="w-full flex items-center gap-3 px-3 py-2 rounded hover:bg-blue-500/20 transition-colors group text-left">
+            <button
+              onClick={() => handleSystemItemClick('documents')}
+              className="w-full flex items-center gap-3 px-3 py-2 rounded hover:bg-blue-500/20 transition-colors group text-left"
+            >
               <Folder className="w-5 h-5 text-blue-400" />
               <span className="text-white text-sm">Documents</span>
             </button>
-            <button className="w-full flex items-center gap-3 px-3 py-2 rounded hover:bg-blue-500/20 transition-colors group text-left">
+            <button
+              onClick={() => handleSystemItemClick('settings')}
+              className="w-full flex items-center gap-3 px-3 py-2 rounded hover:bg-blue-500/20 transition-colors group text-left"
+            >
               <Settings className="w-5 h-5 text-gray-400" />
               <span className="text-white text-sm">Settings</span>
             </button>
@@ -83,7 +112,10 @@ export function StartMenu({ onOpenWindow, onClose }: StartMenuProps) {
 
       {/* Bottom bar */}
       <div className="bg-gradient-to-r from-blue-500/20 to-blue-600/20 border-t border-white/10 p-2 flex justify-end">
-        <button className="flex items-center gap-2 px-3 py-1.5 rounded hover:bg-red-500/20 transition-colors group">
+        <button
+          onClick={handleShutdown}
+          className="flex items-center gap-2 px-3 py-1.5 rounded hover:bg-red-500/20 transition-colors group"
+        >
           <Power className="w-4 h-4 text-red-400" />
           <span className="text-white text-sm">Shut down</span>
         </button>

@@ -2,52 +2,77 @@ export function ProjectsContent() {
   const projects = [
     {
       id: 1,
-      title: '(example)E-Commerce Platform',
-      description: 'A full-featured online shopping platform with payment integration, inventory management, and user authentication.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      icon: '🛒',
-      color: 'from-blue-500 to-blue-600',
+      title: 'Django Project',
+      description: 'A web application built with Django framework, featuring robust backend functionality and database management.',
+      tech: ['Django', 'Python', 'PostgreSQL', 'HTML/CSS'],
+      icon: '🐍',
+      color: 'from-green-500 to-green-600',
+      github: 'https://github.com/poohbears123/Django.git',
     },
     {
       id: 2,
-      title: '(example)Task Management App',
-      description: 'Collaborative task management tool with real-time updates, team workspaces, and progress tracking.',
-      tech: ['Vue.js', 'Firebase', 'Tailwind CSS'],
-      icon: '✅',
-      color: 'from-green-500 to-green-600',
+      title: 'Finals Project',
+      description: 'Comprehensive final project showcasing full-stack development skills and modern web technologies.',
+      tech: ['JavaScript', 'Node.js', 'React', 'MongoDB'],
+      icon: '🎓',
+      color: 'from-blue-500 to-blue-600',
+      github: 'https://github.com/poohbears123/finals.git',
     },
     {
       id: 3,
-      title: '(examles)Weather Dashboard',
-      description: 'Real-time weather application with forecasts, maps, and location-based alerts.',
-      tech: ['React', 'OpenWeather API', 'Chart.js'],
-      icon: '🌤️',
-      color: 'from-sky-500 to-sky-600',
+      title: 'BSIT-2B Repository',
+      description: 'Academic repository for BSIT-2B course containing various programming assignments and projects.',
+      tech: ['Java', 'C++', 'Python', 'Git'],
+      icon: '📚',
+      color: 'from-purple-500 to-purple-600',
+      github: 'https://github.com/poohbears123/Pinuela_James-Mezack_BSIT-2B_Repo.git',
     },
     {
       id: 4,
-      title: 'Portfolio ',
-      description: 'Content management system for creative professionals to showcase their work.',
-      tech: ['Next.js', 'Sanity', 'TypeScript'],
-      icon: '🎨',
-      color: 'from-purple-500 to-purple-600',
+      title: 'Game Project',
+      description: 'Interactive game development project featuring engaging gameplay mechanics and user interfaces.',
+      tech: ['JavaScript', 'HTML5', 'CSS3', 'Canvas API'],
+      icon: '🎮',
+      color: 'from-red-500 to-red-600',
+      github: 'https://github.com/poohbears123/game.git',
     },
     {
       id: 5,
-      title: '(example)Chat Application',
-      description: 'Real-time messaging app with group chats, file sharing, and emoji reactions.',
-      tech: ['React', 'Socket.io', 'Express'],
-      icon: '💬',
-      color: 'from-pink-500 to-pink-600',
+      title: 'Laravel Project',
+      description: 'Full-stack web application built with Laravel PHP framework, including authentication and CRUD operations.',
+      tech: ['Laravel', 'PHP', 'MySQL', 'Bootstrap'],
+      icon: '🚀',
+      color: 'from-orange-500 to-orange-600',
+      github: 'https://github.com/poohbears123/Pinuela_laravelProject.git',
     },
     {
       id: 6,
-      title: '(example)Analytics Dashboard',
-      description: 'Business intelligence dashboard with interactive charts and data visualization.',
-      tech: ['React', 'D3.js', 'PostgreSQL'],
-      icon: '📊',
-      color: 'from-orange-500 to-orange-600',
+      title: 'Example App',
+      description: 'Demonstration application showcasing various programming concepts and best practices.',
+      tech: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
+      icon: '💡',
+      color: 'from-pink-500 to-pink-600',
+      github: 'https://github.com/poohbears123/example-app.git',
     },
+    {
+      id: 7,
+      title: 'Portfolio Website',
+      description: 'Personal portfolio website built with modern web technologies, featuring responsive design and interactive elements.',
+      tech: ['React', 'Next.js', 'Tailwind CSS', 'CSS Animations'],
+      icon: '🌐',
+      color: 'from-indigo-500 to-indigo-600',
+      github: 'https://github.com/poohbears123/portfolio.git',
+    },
+    {
+      id: 8,
+      title: 'API Development',
+      description: 'RESTful API built with Node.js and Express, including authentication, database integration, and comprehensive documentation.',
+      tech: ['Node.js', 'Express', 'MongoDB', 'JavaScript'],
+      icon: '🔗',
+      color: 'from-teal-500 to-teal-600',
+      github: 'https://github.com/poohbears123/api-project.git',
+    },
+
   ];
 
   return (
@@ -59,9 +84,12 @@ export function ProjectsContent() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {projects.map((project) => (
-          <div
+          <a
             key={project.id}
-            className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow"
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
           >
             <div className={`h-2 bg-gradient-to-r ${project.color}`} />
             <div className="p-5">
@@ -85,7 +113,7 @@ export function ProjectsContent() {
                 ))}
               </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>
