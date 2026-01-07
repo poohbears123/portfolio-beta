@@ -74,15 +74,15 @@ export function SettingsContent({ isDarkMode, onToggleDarkMode }: SettingsConten
       <div className="bg-white rounded-lg shadow-md p-6">
         <h2 className="text-lg font-semibold text-gray-800 mb-4">System</h2>
         <div className="space-y-3">
-          <div className="flex items-center justify-between p-3 border border-gray-200 rounded">
-            <span className="text-gray-700">Notifications</span>
-            <div className="w-10 h-5 bg-gray-300 rounded-full relative">
+          <div className="flex items-center justify-between p-3 border border-gray-200 dark:border-gray-600 rounded">
+            <span className="text-gray-700 dark:text-gray-300">Notifications</span>
+            <div className="w-10 h-5 bg-gray-300 dark:bg-gray-600 rounded-full relative">
               <div className="w-4 h-4 bg-white rounded-full absolute left-0.5 top-0.5"></div>
             </div>
           </div>
-          <div className="flex items-center justify-between p-3 border border-gray-200 rounded">
-            <span className="text-gray-700">Sound</span>
-            <div className="w-10 h-5 bg-gray-300 rounded-full relative">
+          <div className="flex items-center justify-between p-3 border border-gray-200 dark:border-gray-600 rounded">
+            <span className="text-gray-700 dark:text-gray-300">Sound</span>
+            <div className="w-10 h-5 bg-gray-300 dark:bg-gray-600 rounded-full relative">
               <div className="w-4 h-4 bg-white rounded-full absolute left-0.5 top-0.5"></div>
             </div>
           </div>

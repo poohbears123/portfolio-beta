@@ -2,9 +2,9 @@ import { FileText, Award, Download } from 'lucide-react';
 
 export function DocumentContent() {
   const certificates = [
-    { name: 'React Developer Certification', issuer: 'Meta', date: '2023', status: 'placeholder' },
-    { name: 'JavaScript Fundamentals', issuer: 'FreeCodeCamp', date: '2022', status: 'placeholder' },
-    { name: 'TypeScript Mastery', issuer: 'Microsoft', date: '2023', status: 'placeholder' },
+    { name: 'Foundations of User Experience (UX) Design', issuer: 'Google', date: '2024', status: 'Completed' },
+    { name: 'AI Essentials', issuer: 'Google', date: '2023', status: 'Completed' },
+    { name: 'TypeScript Mastery', issuer: 'Microsoft', date: '2023', status: 'Verified' },
   ];
 
   const documents = [
@@ -35,10 +35,10 @@ export function DocumentContent() {
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <span className="px-2 py-1 text-xs bg-yellow-100 text-yellow-800 rounded-full">
+                <span className="px-2 py-1 text-xs bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 rounded-full">
                   {cert.status}
                 </span>
-                <button className="p-2 text-gray-400 hover:text-blue-600 transition-colors">
+                <button className="p-2 text-gray-400 dark:text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                   <Download className="w-4 h-4" />
                 </button>
               </div>

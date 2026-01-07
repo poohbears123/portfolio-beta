@@ -20,7 +20,7 @@ export function ContactContent() {
       icon: Linkedin,
       label: 'LinkedIn',
       value: 'linkedin.com/in/johndoe',
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/in/pinuela-james-mezack-3680aa317/',
       color: 'from-blue-600 to-blue-700',
     },
     {
@@ -70,8 +70,8 @@ export function ContactContent() {
                   <method.icon className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-gray-500 text-xs mb-1">{method.label}</p>
-                  <p className="text-gray-800 text-sm truncate">{method.value}</p>
+                  <p className="text-gray-500 dark:text-gray-400 text-xs mb-1">{method.label}</p>
+                  <p className="text-gray-800 dark:text-gray-100 text-sm truncate">{method.value}</p>
                 </div>
               </div>
             </a>
@@ -82,25 +82,25 @@ export function ContactContent() {
           <h3 className="text-gray-800 mb-3">Send a Message</h3>
           <form className="space-y-3">
             <div>
-              <label className="block text-gray-700 text-sm mb-1">Name</label>
+              <label className="block text-gray-700 dark:text-gray-300 text-sm mb-1">Name</label>
               <input
                 type="text"
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 dark:text-gray-100"
                 placeholder="Your name"
               />
             </div>
             <div>
-              <label className="block text-gray-700 text-sm mb-1">Email</label>
+              <label className="block text-gray-700 dark:text-gray-300 text-sm mb-1">Email</label>
               <input
                 type="email"
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 dark:text-gray-100"
                 placeholder="your.email@example.com"
               />
             </div>
             <div>
-              <label className="block text-gray-700 text-sm mb-1">Message</label>
+              <label className="block text-gray-700 dark:text-gray-300 text-sm mb-1">Message</label>
               <textarea
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none bg-white"
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none bg-white dark:bg-gray-700 dark:text-gray-100"
                 rows={4}
                 placeholder="Your message..."
               />

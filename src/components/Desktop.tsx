@@ -112,7 +112,7 @@ export function Desktop({ onOpenWindow }: DesktopProps) {
           }}
         >
           <div className="text-5xl drop-shadow-lg pointer-events-none">{icon.icon}</div>
-          <span className="text-white text-xs text-center drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)] px-1 py-0.5 rounded group-hover:bg-blue-600/50 pointer-events-none">
+          <span className="text-white dark:text-gray-200 text-xs text-center drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)] px-1 py-0.5 rounded group-hover:bg-blue-600/50 pointer-events-none">
             {icon.label}
           </span>
         </button>

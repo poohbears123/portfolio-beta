@@ -28,7 +28,7 @@ export function SkillsContent() {
       icon: '🛠️',
       color: 'from-purple-500 to-purple-600',
       skills: [
-        { name: 'Git', level: 90 },
+        { name: 'Github', level: 90 },
         { name: 'Figma', level: 80 },
         { name: 'VsCode', level: 75},
         { name: 'Docker', level: 70 },
@@ -40,7 +40,7 @@ export function SkillsContent() {
     <div className="p-6">
       <div className="mb-6">
         <h2 className="text-gray-800">Skills & Technologies</h2>
-        <p className="text-gray-600">(this area is a placeholder for now)</p>
+        <p className="text-gray-600">These are my current IT related skill</p>
       </div>
 
       <div className="space-y-6">
@@ -53,16 +53,16 @@ export function SkillsContent() {
             <div className="p-5">
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-2xl">{category.icon}</span>
-                <h3 className="text-gray-800">{category.category}</h3>
+                <h3 className="text-gray-800 dark:text-gray-100">{category.category}</h3>
               </div>
               <div className="space-y-3">
                 {category.skills.map((skill, skillIdx) => (
                   <div key={skillIdx}>
                     <div className="flex justify-between mb-1">
-                      <span className="text-gray-700 text-sm">{skill.name}</span>
-                      <span className="text-gray-500 text-sm">{skill.level}%</span>
+                      <span className="text-gray-700 dark:text-gray-300 text-sm">{skill.name}</span>
+                      <span className="text-gray-500 dark:text-gray-400 text-sm">{skill.level}%</span>
                     </div>
-                    <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+                    <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                       <div
                         className={`h-full bg-gradient-to-r ${category.color} transition-all duration-500 rounded-full`}
                         style={{ width: `${skill.level}%` }}

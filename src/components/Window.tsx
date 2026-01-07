@@ -163,7 +163,7 @@ export function Window({
       </div>
 
       {/* Window content */}
-      <div className="absolute inset-0 top-8 bg-gradient-to-br from-gray-50 to-gray-100 overflow-auto">
+      <div className="absolute inset-0 top-8 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 overflow-auto">
         {children}
       </div>
 
