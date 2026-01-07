@@ -79,7 +79,7 @@ export function ProjectsContent() {
     <div className="p-6">
       <div className="mb-4">
         <h2 className="text-gray-800">My Projects</h2>
-        <p className="text-gray-600">A showcase of my recent work and side projects (this area is a placeholder for now)</p>
+        <p className="text-gray-600">A showcase of my recent work and side projects (this area is a placeholder for now and not complete)</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

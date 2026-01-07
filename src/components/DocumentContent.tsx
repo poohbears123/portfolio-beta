@@ -5,6 +5,8 @@ export function DocumentContent() {
     { name: 'Foundations of User Experience (UX) Design', issuer: 'Google', date: '2024', status: 'Completed' },
     { name: 'AI Essentials', issuer: 'Google', date: '2023', status: 'Completed' },
     { name: 'TypeScript Mastery', issuer: 'Microsoft', date: '2023', status: 'Verified' },
+    { name: 'Technical Vocational And Livelihood ICT', issuer: 'FCU', date: '2023', status: 'Completed' },
+    { name: 'Consumer Electronics Servicing NC II', issuer: 'TESDA', date: '2021', status: 'Verified' },
   ];
 
   const documents = [

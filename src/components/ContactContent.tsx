@@ -19,15 +19,15 @@ export function ContactContent() {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      value: 'linkedin.com/in/johndoe',
+      value: 'Pinuela, James Mezack',
       href: 'https://www.linkedin.com/in/pinuela-james-mezack-3680aa317/',
       color: 'from-blue-600 to-blue-700',
     },
     {
       icon: Twitter,
       label: 'Twitter',
-      value: '@johndoe',
-      href: 'https://twitter.com',
+      value: '@jmp051104',
+      href: 'https://x.com/jmp051104',
       color: 'from-sky-500 to-sky-600',
     },
     {
