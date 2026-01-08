@@ -3,8 +3,8 @@ export function AboutContent() {
     <div className="p-6">
       <div className="max-w-2xl mx-auto">
         <div className="flex items-start gap-6 mb-6">
-          <div className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-6xl shadow-lg">
-            👨‍💻
+          <div className="w-32 h-32 rounded-full shadow-lg overflow-hidden">
+            <img src="/profile.jpg" alt="Profile" className="w-full h-full object-cover" />
           </div>
           <div className="flex-1">
             <h2 className="text-gray-800 dark:text-gray-100 mb-2">James Mezack Pinuela</h2>
