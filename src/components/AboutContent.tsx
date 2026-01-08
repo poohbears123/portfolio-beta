@@ -39,15 +39,18 @@ export function AboutContent() {
         <div className="grid grid-cols-3 gap-4">
           <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-lg p-4 text-center border border-blue-200 dark:border-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-300">
             <div className="text-3xl mb-2">💻</div>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">Web: React, Next.js, Node.js, TypeScript.</p>
+              <p className="text-gray-700 dark:text-gray-300 text-sm">Web</p>
+              <p className="text-gray-700 dark:text-gray-300 text-sm">React, Next.js, Node.js, TypeScript.</p>
           </div>
           <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-lg p-4 text-center border border-green-200 dark:border-green-700 hover:scale-105 hover:shadow-lg transition-all duration-300">
             <div className="text-3xl mb-2">⚙️</div>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">Systems: Embedded C/C++, Firmware, Hardware Modding.</p>
+            <p className="text-gray-700 dark:text-gray-300 text-sm">Systems</p>
+            <p className="text-gray-700 dark:text-gray-300 text-sm">Embedded C/C++, Firmware, Hardware Modding.</p>
           </div>
           <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-lg p-4 text-center border border-purple-200 dark:border-purple-700 hover:scale-105 hover:shadow-lg transition-all duration-300">
             <div className="text-3xl mb-2">🎨</div>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">Design: UI/UX Design, Figma, Responsive Systems.</p>
+            <p className="text-gray-700 dark:text-gray-300 text-sm">Design</p>
+            <p className="text-gray-700 dark:text-gray-300 text-sm">UI/UX Design, Figma, Responsive Systems.</p>
           </div>
         </div>
       </div>
