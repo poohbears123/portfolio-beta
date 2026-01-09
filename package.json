@@ -51,10 +51,14 @@
             "@types/react": "^19.2.7",
             "@types/react-dom": "^19.2.3",
             "@vitejs/plugin-react-swc": "^3.10.2",
+            "gh-pages": "^6.1.1",
             "vite": "^6.4.1"
       },
       "scripts": {
             "dev": "vite",
-            "build": "vite build"
+            "build": "vite build",
+            "predeploy": "npm run build",
+            "deploy": "gh-pages -d build",
+            "postbuild": "copy build\\index.html build\\404.html && type nul > build\\.nojekyll"
       }
 }
